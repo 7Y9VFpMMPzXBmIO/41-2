@@ -24,5 +24,10 @@ namespace _41размерИльясов
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage());
+        }
     }
 }

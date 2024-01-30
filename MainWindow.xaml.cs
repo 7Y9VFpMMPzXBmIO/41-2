@@ -23,6 +23,7 @@ namespace _41размерИльясов
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new ProductPage());
         }
     }
 }

@@ -9,6 +9,6 @@
       Title="ProductPage">
 
     <Grid>
-        
+        <!--<Button Content="Go" Click="Button_Click"></Button>-->
     </Grid>
 </Page>
