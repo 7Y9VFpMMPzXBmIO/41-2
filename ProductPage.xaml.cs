@@ -23,6 +23,8 @@ namespace _41размерИльясов
         public ProductPage()
         {
             InitializeComponent();
+            List<Product> currentProducts = Ilyasov41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProducts;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

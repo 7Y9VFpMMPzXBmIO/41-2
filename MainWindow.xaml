@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_41размерИльясов"
         mc:Ignorable="d"
-        Title="Ильясов41размер" MinHeight="450" MinWidth="800" Icon="Resources\icon.ico" FontFamily=" Comic Sans MS">
+        Title="Ильясов 41 размер"  Height="600" Width="1100" MinHeight="450" MinWidth="1100" Icon="images\icon.ico" FontFamily=" Comic Sans MS">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Image Source = "Resources/logo.png" HorizontalAlignment="Left"></Image>
+        <Image Source = "images/logo.png" HorizontalAlignment="Left"></Image>
         <TextBlock Text="ООО 41 размер" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <Frame Grid.Row="1" Name="MainFrame"></Frame>
-        <Button Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center"></Button>
+        <!--<Button Content="Назад" Name="Btn" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Center" Click="Btn_Click"></Button>
+        <Frame Grid.Row="1" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"/>-->
     </Grid>
 </Window>

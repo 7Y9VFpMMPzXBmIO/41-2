@@ -25,5 +25,20 @@ namespace _41размерИльясов
             InitializeComponent();
             MainFrame.Navigate(new ProductPage());
         }
+
+
+        //private void Btn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //Manager.MainFrame.GoBack();
+        //}
+        //private void MainFrame_ContentRendered(object sender, EventArgs e)
+        //{
+        //    if (MainFrame.CanGoBack)
+        //        Btn.Visibility = Visibility.Visible;
+        //    else
+        //        Btn.Visibility = Visibility.Hidden;
+        //}
+
+      
     }
 }
