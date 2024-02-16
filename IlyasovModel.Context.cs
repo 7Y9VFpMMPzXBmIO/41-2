@@ -18,11 +18,9 @@ namespace _41размерИльясов
         private static Ilyasov41Entities _context;
         public static Ilyasov41Entities GetContext()
         {
-            if (_context == null)
-            {
-                _context = new Ilyasov41Entities();
-            }
+            if (null == _context)
 
+                _context = new Ilyasov41Entities();
             return _context;
         }
         public Ilyasov41Entities()
@@ -34,7 +32,7 @@ namespace _41размерИльясов
         {
             throw new UnintentionalCodeFirstException();
         }
-
+    
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }

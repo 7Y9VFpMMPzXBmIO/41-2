@@ -24,14 +24,13 @@ namespace _41размерИльясов
         public string OrderDate { get; set; }
         public System.DateTime OrderDeliveryDate { get; set; }
         public int OrderPickupPoint { get; set; }
-        public string Surname { get; set; }
-        public string Name { get; set; }
-        public string Patronomyc { get; set; }
+        public Nullable<int> ClientID { get; set; }
         public string OrderReceiveCode { get; set; }
         public string OrderStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
         public virtual PickUpPoint PickUpPoint { get; set; }
+        public virtual User User { get; set; }
     }
 }
