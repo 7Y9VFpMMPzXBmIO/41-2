@@ -22,9 +22,32 @@ namespace _41размерИльясов
     {
         int maxCount = 0;
         List<Product> TableList;
-        public ProductPage()
+        public ProductPage(User user)
         {
             InitializeComponent();
+            if (user != null)
+            {
+                FIOTB.Text = user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
+                switch (user.UserRole)
+                {
+                    case 1:
+                        RoleTB.Text = "Администратор"; break;
+                    case 2:
+                        RoleTB.Text = "Клиент"; break;
+                    case 3:
+                        RoleTB.Text = "Менеджер"; break;
+                }
+                URole.Visibility = Visibility.Visible;
+                RoleTB.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                FIOTB.Text = "Гость";
+                URole.Visibility = Visibility.Hidden;
+                RoleTB.Visibility = Visibility.Hidden;
+            }
+
+
             List<Product> currentProducts = Ilyasov41Entities.GetContext().Product.ToList();
             ProductListView.ItemsSource = currentProducts;
 
@@ -47,12 +70,12 @@ namespace _41размерИльясов
 
             if (Filter.SelectedIndex == 1)
             {
-                currentProducts = currentProducts.Where(p => p.ProductDiscountAmount >= 0 && p.ProductDiscountAmount <= 9.99).ToList();
+                currentProducts = currentProducts.Where(p => p.ProductDiscountAmount >= 0 && p.ProductDiscountAmount <= 10).ToList();
             }
 
             if (Filter.SelectedIndex == 2)
             {
-                currentProducts = currentProducts.Where(p => p.ProductDiscountAmount >= 10 && p.ProductDiscountAmount <= 14.99).ToList();
+                currentProducts = currentProducts.Where(p => p.ProductDiscountAmount >= 10 && p.ProductDiscountAmount <= 15).ToList();
             }
 
             if (Filter.SelectedIndex == 3)

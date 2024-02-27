@@ -23,7 +23,8 @@ namespace _41размерИльясов
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new AuthPage1());
+            Manager.MainFrame = MainFrame;
         }
 
 
@@ -31,13 +32,13 @@ namespace _41размерИльясов
         {
             Manager.MainFrame.GoBack();
         }
-        //private void MainFrame_ContentRendered(object sender, EventArgs e)
-        //{
-        //    //if (MainFrame.CanGoBack)
-        //    //    Btn.Visibility = Visibility.Visible;
-        //    //else
-        //    //    Btn.Visibility = Visibility.Hidden;
-        //}
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+                Btn.Visibility = Visibility.Visible;
+            else
+                Btn.Visibility = Visibility.Hidden;
+        }
 
 
     }
